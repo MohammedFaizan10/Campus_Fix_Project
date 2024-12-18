@@ -7,12 +7,12 @@
   .college-title {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px; /* Ensures space below the image */
+    margin-bottom: 30px; 
 }
 
 .college-title img {
     width: 100%;
-    max-width: 700px; /* Adjust image size */
+    max-width: 700px; 
     height: auto;
 }
 body {
@@ -27,7 +27,7 @@ body {
     margin: 0;
 }
 .wrapper {
-    margin-top: 10px; /* Extra margin to add space */
+    margin-top: 10px;
     width: 420px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
@@ -121,10 +121,10 @@ body {
   
 .admin-link {
     display: inline-block;
-    text-decoration: underline; /* Underlines the text */
-    color: #fff; /* White font color */
-    background: transparent; /* Transparent background */
-    border: none; /* Removes any border */
+    text-decoration: underline;
+    color: #fff;
+    background: transparent;
+    border: none;
     font-size: 16px;
     font-weight: 600;
     text-align: center;
@@ -133,7 +133,7 @@ body {
 }
 
 .admin-link:hover {
-    color: #e6e6e6; /* Slight color change on hover */
+    color: #e6e6e6;
     text-decoration: underline;
 }
 
