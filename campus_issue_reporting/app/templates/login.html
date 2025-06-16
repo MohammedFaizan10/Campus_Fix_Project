@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-3xl font-bold">Login</h2>
+<form method="POST" action="{{ url_for('login') }}">
+    {{ form.hidden_tag() }}
+    <div class="mt-4">
+        {{ form.username.label }}
+        {{ form.username(class="form-input mt-1") }}
+    </div>
+    <div class="mt-4">
+        {{ form.password.label }}
+        {{ form.password(class="form-input mt-1") }}
+    </div>
+    <div class="mt-4">
+        {{ form.submit(class="bg-blue-600 text-white py-2 px-4 rounded") }}
+    </div>
+</form>
+{% endblock %}

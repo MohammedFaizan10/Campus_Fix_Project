@@ -1,0 +1,12 @@
+Flask
+Flask-SQLAlchemy
+Flask-WTF
+Flask-Login
+Flask-Mail
+Flask-SocketIO
+Flask-Caching
+Flask-Limiter
+Flask-Bootstrap
+Flask-Admin
+Flask-Session
+Flask-Flash

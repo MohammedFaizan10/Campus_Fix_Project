@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Issue Reporting</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.0.0/dist/socket.io.min.js"></script>
+    <script>
+        var socket = io();
+        socket.on('new_notification', function (data) {
+            alert(data.message);
+        });
+    </script>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between">
+            <a href="/" class="text-white text-2xl">Campus Issue Reporting</a>
+            <div>
+                {% if current_user.is_authenticated %}
+                <a href="{{ url_for('dashboard') }}" class="text-white mr-4">Dashboard</a>
+                <a href="{{ url_for('logout') }}" class="text-white">Logout</a>
+                {% else %}
+                <a href="{{ url_for('login') }}" class="text-white mr-4">Login</a>
+                <a href="{{ url_for('register') }}" class="text-white">Register</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto mt-6">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>

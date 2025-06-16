@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Fix - Student Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* Change font */
+            background: linear-gradient(to right, #81b0ce, #e2e2e2);
+            /* Gradient background */
+            margin: 0;
+            padding: 20px;
+            background: url('maxresdefault.jpg') no-repeat center center fixed;
+            /* Add your image URL */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            /* More rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            /* Deeper shadow */
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #333;
+            /* Darker text color for better contrast */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+            /* Slightly lighter text color */
+        }
+
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            /* Border for input fields */
+            border-radius: 5px;
+            /* Rounded corners */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            /* Change button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            /* Darker shade on hover */
+            transform: scale(1.05);
+            /* Slightly enlarge on hover */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .report {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            /* More rounded corners */
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Add shadow */
+        }
+
+        #confirmationMessage {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #d4edda;
+            /* Light green background for success */
+            color: #155724;
+            /* Dark green text */
+            border: 1px solid #c3e6cb;
+            /* Green border */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Report an Issue</h1>
+        <form id="issueForm">
+            <label for="issuePhoto">Upload a Photo:</label>
+            <input type="file" id="issuePhoto" accept="image/*" required>
+
+            <label for="issueDescription">Description:</label>
+            <textarea id="issueDescription" rows="4" required></textarea>
+
+            <button type="submit">Submit Report</button>
+        </form>
+        <div id="confirmationMessage" class="hidden"></div>
+
+        <h2>Your Submitted Issues</h2>
+        <div id="submittedReports"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

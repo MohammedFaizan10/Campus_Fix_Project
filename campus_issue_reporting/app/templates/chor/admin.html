@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url(clg.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+
+        /* College Title */
+        .college-title {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            /* Adds space below the title */
+        }
+
+        .college-title img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+        }
+
+        /* Login Wrapper */
+        .wrapper {
+            width: 420px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            color: #fff;
+            border-radius: 12px;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .wrapper h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: #fff;
+            padding: 20px 45px 20px 20px;
+        }
+
+        .input-box input::placeholder {
+            color: #fff;
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        .btn {
+            width: 100%;
+            height: 40px;
+            background: #fff;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #e6e6e6;
+        }
+    </style>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- College Title Image -->
+    <div class="college-title">
+        <img src="clgdet.jpg" alt="College Title">
+    </div>
+
+    <!-- Admin Login Form -->
+    <div class="wrapper">
+        <form action="">
+            <h1>Admin Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="button" class="btn" onclick="window.location.href='admin_dashboard.html';">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
